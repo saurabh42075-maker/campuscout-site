@@ -251,3 +251,7 @@ footer .num{color:#EFF4F2}
 .counsellor{display:grid;gap:10px;max-width:none}
 @media(min-width:860px){.counsellor{grid-template-columns:1fr 1fr;column-gap:40px}.counsellor .eyebrow,.counsellor h3{grid-column:1/-1}}
 .counsellor > p:not(.eyebrow){margin-top:0}
+.cols + .card.limits{margin-top:clamp(18px,2.4vw,22px)}
+.limits h3{margin-top:10px}
+.quote-note{margin-top:14px;font-size:14.5px;color:var(--muted);padding-left:4px}
+.price{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-weight:600;color:var(--ink);font-size:15px}
