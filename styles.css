@@ -273,3 +273,4 @@ textarea{resize:vertical;min-height:100px;line-height:1.5}
 .form-card h2{font-size:clamp(21px,2.6vw,25px)}
 .btn:disabled{opacity:.6;cursor:wait}
 .form-card .btn{margin-top:20px}
+.card.limits .ticks b{color:var(--ink)}
