@@ -1,0 +1,8 @@
+{
+  "name": "campuscout-site",
+  "private": true,
+  "description": "Campuscout website. Static pages plus one Netlify Function for the website assistant.",
+  "dependencies": {
+    "@anthropic-ai/sdk": "0.131.0"
+  }
+}

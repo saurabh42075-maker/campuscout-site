@@ -1,0 +1,7 @@
+# Static site published from the repo root, plus one function for the chat assistant.
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
