@@ -136,9 +136,9 @@ ul.ticks.no li::after{border:0;left:5px;top:12px;width:8px;height:2px;background
 /* ---------- forms ---------- */
 label,.legend{display:block;font-size:13.5px;font-weight:600;color:var(--ink);margin-bottom:6px}
 fieldset{border:0;margin:0;padding:0;min-width:0}
-input,select{width:100%;font-family:var(--font-body);font-size:16px;padding:12px 13px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);color:var(--body);appearance:none;-webkit-appearance:none}
+input,select,textarea{width:100%;font-family:var(--font-body);font-size:16px;padding:12px 13px;border:1px solid var(--line);border-radius:var(--radius-sm);background:var(--paper);color:var(--body);appearance:none;-webkit-appearance:none}
 select{background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);background-position:calc(100% - 18px) 52%,calc(100% - 13px) 52%;background-size:5px 5px;background-repeat:no-repeat;padding-right:34px}
-input:focus,select:focus{outline:2px solid var(--ochre);outline-offset:0;border-color:transparent}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--ochre);outline-offset:0;border-color:transparent}
 input::placeholder{color:var(--muted);opacity:.75}
 .two{display:grid;grid-template-columns:1fr;gap:14px}
 @media(min-width:520px){.two{grid-template-columns:1fr 1fr}}
@@ -268,3 +268,8 @@ footer .num{color:#EFF4F2}
 .track h3{font-size:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .track .more{margin-top:auto;padding-top:20px}
 .track .inner > p{font-size:15px;color:var(--muted);margin-top:10px}
+textarea{resize:vertical;min-height:100px;line-height:1.5}
+.opt{font-weight:400;color:var(--muted)}
+.form-card h2{font-size:clamp(21px,2.6vw,25px)}
+.btn:disabled{opacity:.6;cursor:wait}
+.form-card .btn{margin-top:20px}

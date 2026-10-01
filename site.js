@@ -17,7 +17,7 @@
 
   // Hide the floating WhatsApp bar while the form or footer is on screen.
   var bar = document.querySelector(".mcta");
-  var targets = [document.getElementById("start"), document.querySelector("footer"), document.querySelector(".cta-box")]
+  var targets = [document.getElementById("start"), document.getElementById("careers"), document.querySelector("footer"), document.querySelector(".cta-box")]
     .filter(Boolean);
   if (bar && "IntersectionObserver" in window && targets.length) {
     var visible = new Set();
