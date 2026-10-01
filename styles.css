@@ -315,3 +315,6 @@ textarea{resize:vertical;min-height:100px;line-height:1.5}
 }
 @media (prefers-reduced-motion:reduce){.typing::after{animation:none;width:28px}}
 .chat-panel[hidden]{display:none}
+.opening{margin-top:18px;border-left:4px solid var(--ochre)}
+.opening h3{margin-top:10px}
+.opening > p a{font-weight:600;overflow-wrap:anywhere}
