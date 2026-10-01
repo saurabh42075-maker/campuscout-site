@@ -1,50 +1,86 @@
-<title>Campuscout</title>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Campuscout — Free college guidance for Class 11 &amp; 12</title>
+<meta name="description" content="Free, honest career guidance for Class 11 and 12 students and their parents in Jaipur. College shortlists for India and abroad, through to admission.">
+<meta name="theme-color" content="#0D1F1E">
+<meta property="og:title" content="Campuscout — Choosing a college should not be a guess">
+<meta property="og:description" content="Free career guidance for Class 11 and 12 students and their parents. India and abroad.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23E5A45E'/%3E%3Cpath d='M16 6.5l6 16-6-3.4-6 3.4z' fill='%230D1F1E'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="site.js" defer></script>
 <style>
-.hero{background:var(--shade);color:#EFF4F2;padding-block:42px 54px}
-.hero h1{color:#fff;font-size:clamp(30px,5.6vw,45px);max-width:19ch}
-.hero .lede{color:#C4D8D4;font-size:17px;margin-top:16px;max-width:52ch}
+.hero{padding-block:30px 48px}
+@media(min-width:880px){.hero{padding-block:72px 88px}}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:34px}
-@media(min-width:880px){.hero-grid{grid-template-columns:1.05fr .95fr;gap:46px;align-items:start}}
-.proof{display:flex;gap:26px;flex-wrap:wrap;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16)}
-.proof b{display:block;font-family:var(--font-display);font-size:26px;color:#E5A45E;font-weight:700;font-variant-numeric:tabular-nums}
-.proof small{font-size:12.5px;color:#A9C3BE;display:block;max-width:20ch;line-height:1.45}
-.form-card{box-shadow:0 12px 34px rgba(8,30,30,.22)}
-.form-card h2{font-size:21px}
-.track-link{display:block;text-decoration:none;color:inherit}
-.track-link:hover{border-color:var(--ochre)}
-.track-link h3{font-size:19px;display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
-.more{color:var(--ochre);font-size:14px;font-weight:600;margin-top:16px;display:inline-block}
+@media(min-width:880px){.hero-grid{grid-template-columns:1.08fr .92fr;gap:56px;align-items:center}}
+.hero h1{color:#fff;font-size:clamp(33px,6.4vw,56px);max-width:16ch;margin-top:16px;line-height:1.08}
+.hero h1 em{font-style:italic;color:var(--ochre-hi)}
+.hero .lede{color:var(--on-shade-muted);font-size:clamp(16px,2.3vw,18.5px);margin-top:16px;max-width:52ch}
+.hero-ctas{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:24px}
+.hero-ctas .btn{background:#7FC29B;color:#0B1A19}
+@media(min-width:880px){.hero-ctas{display:none}}
+.proof{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
+.proof b{display:block;font-family:var(--font-display);font-size:clamp(21px,3.4vw,30px);line-height:1.1;color:var(--ochre-hi);font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.proof small{font-size:12.5px;color:#A9C3BE;display:block;margin-top:6px;line-height:1.4;max-width:22ch}
+@media(min-width:880px){.proof{gap:28px;margin-top:36px;padding-top:28px}.proof small{font-size:13.5px}}
+.form-card{box-shadow:var(--shadow-lg);border:0;padding:clamp(22px,3.4vw,32px)}
+.form-card h2{font-size:clamp(21px,2.6vw,25px)}
+.form-card .sub{font-size:14.5px;color:var(--muted);margin-top:6px}
+.form-card .btn{margin-top:20px}
+.form-card .alt{padding-top:12px;border-top:1px dashed var(--line)}
+.track{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s,box-shadow .2s}
+.track:hover{border-color:var(--ochre);transform:translateY(-3px)}
+.track h3{font-size:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.track .more{margin-top:auto;padding-top:20px}
+.school{display:grid;gap:18px;align-items:center}
+@media(min-width:820px){.school{grid-template-columns:1fr auto;gap:40px}}
+.school h3{font-size:clamp(21px,2.8vw,26px)}
+.school p{font-size:15.5px;color:var(--muted);max-width:62ch}
+.school .btn{background:transparent;color:var(--ochre);border:1.5px solid var(--ochre);white-space:nowrap}
 </style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap nav-in">
+  <a class="brand" href="index.html" aria-label="Campuscout home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#E5A45E"/><path d="M16 6.5l6 16-6-3.4-6 3.4z" fill="#0D1F1E"/></svg><span>Campus<em>cout</em></span></a>
+  <nav id="menu" class="menu" aria-label="Main"><ul>
+    <li><a href="india.html">India</a></li>
+    <li><a href="abroad.html">Abroad</a></li>
+    <li><a href="schools.html">For schools</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul></nav>
+  <a class="nav-cta" href="#start">Talk to us</a>
+  <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><svg class="bars" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div></header>
 
-<nav class="nav"><div class="wrap">
-  <a class="brand" href="index.html">Campus<span>cout</span></a>
-  <ul>
-    <li><a class="link" href="india.html">India</a></li>
-    <li><a class="link" href="abroad.html">Abroad</a></li>
-    <li><a class="link" href="schools.html">For schools</a></li>
-    <li><a class="link" href="about.html">About</a></li>
-  </ul>
-  <a class="wa" href="#start">Talk to us</a>
-</div></nav>
-
+<main id="main">
 <div class="hero"><div class="wrap hero-grid">
   <div>
-    <p class="eyebrow">For Class 11 &amp; 12 students and their parents</p>
-    <h1>Choosing a college should not be a guess.</h1>
+    <p class="pill">For Class 11 &amp; 12 students and parents</p>
+    <h1>Choosing a college should not be <em>a guess.</em></h1>
     <p class="lede">Most families decide on a cousin's advice and a coaching-class rumour. We sit with your child, look at their marks, interests and your budget, then go and find the colleges that actually fit — in India or abroad.</p>
+    <div class="hero-ctas">
+      <a class="btn" href="#start">Get free guidance <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn-ghost" href="#how">How it works</a>
+    </div>
     <div class="proof">
       <div><b>10%</b><small>of Indian students ever get proper career guidance</small></div>
-      <div><b>1 : 3,000</b><small>counsellor-to-student ratio in India. Global norm is 1:250</small></div>
+      <div><b>1:3,000</b><small>counsellor-to-student ratio in India. Global norm is 1:250</small></div>
       <div><b>₹0</b><small>what this costs you. Ever.</small></div>
     </div>
   </div>
 
-  <div class="card form-card">
-    <h2 id="start">Start with a free consultation</h2>
-    <p class="fine" style="margin-top:6px;font-size:14px">Fill this in and we continue on WhatsApp. About a minute.</p>
+  <div class="card form-card" id="start">
+    <h2>Start with a free consultation</h2>
+    <p class="sub">Fill this in and we continue on WhatsApp. About a minute.</p>
     <form id="lead" name="lead" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
       <input type="hidden" name="form-name" value="lead">
       <p hidden><label>Leave this empty: <input name="bot-field"></label></p>
@@ -61,24 +97,24 @@
             <option>Commerce</option><option>Arts / Humanities</option><option>Not decided yet</option></select></div>
           <div><label for="marks">Class 10 / 12 percentage</label><input id="marks" name="marks" inputmode="decimal" placeholder="e.g. 78%"></div>
         </div>
-        <div>
-          <label for="goalgrp" id="goalgrp">Where are you looking?</label>
-          <div class="seg" role="radiogroup" aria-labelledby="goalgrp">
+        <fieldset>
+          <legend class="legend">Where are you looking?</legend>
+          <div class="seg">
             <label><input type="radio" name="goal" value="India" checked><span>India</span></label>
             <label><input type="radio" name="goal" value="Abroad"><span>Abroad</span></label>
             <label><input type="radio" name="goal" value="Both — not sure"><span>Not sure</span></label>
           </div>
-        </div>
+        </fieldset>
         <div class="two">
           <div><label for="pname">Parent's name</label><input id="pname" name="parent_name" placeholder="Mrs. Sunita Sharma" required></div>
-          <div><label for="phone">Parent's WhatsApp number</label><input id="phone" name="parent_whatsapp" inputmode="tel" autocomplete="tel" placeholder="98290 00000" required></div>
+          <div><label for="phone">Parent's WhatsApp number</label><input id="phone" name="parent_whatsapp" type="tel" inputmode="tel" autocomplete="tel" placeholder="98290 00000" required></div>
         </div>
-        <div><label for="city">City</label><input id="city" name="city" value="Jaipur"></div>
+        <div><label for="city">City</label><input id="city" name="city" value="Jaipur" autocomplete="address-level2"></div>
       </div>
-      <button class="btn" type="submit">Continue on WhatsApp</button>
+      <button class="btn block" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Continue on WhatsApp</button>
       <p class="fine" id="err" role="status"></p>
       <p class="fine">We speak to the parent, not just the student. Nothing goes to any college without your say-so.</p>
-      <p class="fine" style="padding-top:12px;border-top:1px dashed var(--line)">WhatsApp not opening? Message us on
+      <p class="fine alt">WhatsApp not opening? Message us on
         <span class="num" id="wa-display">+91 98114 51617</span>
         <button type="button" class="copy" id="copybtn">Copy</button></p>
     </form>
@@ -92,7 +128,7 @@
     <p>Different calendars, different exams, very different money. We handle both — and we will tell you plainly if one of them is wrong for your family.</p>
   </div>
   <div class="cols cols-2">
-    <a class="card track-link" href="india.html">
+    <a class="card track" href="india.html">
       <h3>Studying in India <span class="tag">Apr – Jul</span></h3>
       <ul class="ticks">
         <li>Stream and course fit before you chase a college name</li>
@@ -102,7 +138,7 @@
       </ul>
       <span class="more">How we work on India admissions →</span>
     </a>
-    <a class="card track-link" href="abroad.html">
+    <a class="card track" href="abroad.html">
       <h3>Studying abroad <span class="tag">12–18 months ahead</span></h3>
       <ul class="ticks">
         <li>Whether the return on cost genuinely works for your family</li>
@@ -116,53 +152,71 @@
 </div></section>
 
 <div class="band"><div class="wrap band-grid">
-  <div>
+  <div >
     <p class="eyebrow">Why it is free</p>
-    <h2 style="font-size:clamp(22px,3.4vw,28px)">Somebody pays for this. It is not you.</h2>
-    <p style="margin-top:13px">Colleges pay us a referral fee when a student we have counselled chooses to enrol with them. That is how this works, and we would rather you heard it from us on day one than found out later.</p>
-    <p style="margin-top:11px">It also means we say this out loud: if the right college for your child is one that pays us nothing, we will tell you. A family that recommends us to three other families is worth far more than one fee.</p>
+    <h2>Somebody pays for this. It is not you.</h2>
+    <p>Colleges pay us a referral fee when a student we have counselled chooses to enrol with them. That is how this works, and we would rather you heard it from us on day one than found out later.</p>
+    <p>It also means we say this out loud: if the right college for your child is one that pays us nothing, we will tell you. A family that recommends us to three other families is worth far more than one fee.</p>
   </div>
   <p class="quote">We never ask students or parents for money — not for the session, not for the assessment, not for the report.</p>
 </div></div>
 
-<section><div class="wrap">
+<section id="how"><div class="wrap">
   <div class="sec-head"><p class="eyebrow">How it works</p><h2>Three conversations, not a sales call</h2></div>
-  <div class="cols cols-3">
-    <div class="step"><div class="step-n">1</div><div><h3>Assessment</h3>
-      <p>A proper sitting with the student — interests, subjects they actually enjoy, marks, and what the family can spend. Parents in the room.</p></div></div>
-    <div class="step"><div class="step-n">2</div><div><h3>Written shortlist</h3>
-      <p>A report you keep: courses that fit, colleges across safe, likely and stretch, with fees, requirements and dates set out.</p></div></div>
-    <div class="step"><div class="step-n">3</div><div><h3>Through to admission</h3>
-      <p>Forms, deadlines, counselling rounds, documents. We stay with you until your child has a seat, not until you have a PDF.</p></div></div>
+  <div class="steps">
+    <div class="step"><div class="step-n">1</div><h3>Assessment</h3>
+      <p>A proper sitting with the student — interests, subjects they actually enjoy, marks, and what the family can spend. Parents in the room.</p></div>
+    <div class="step"><div class="step-n">2</div><h3>Written shortlist</h3>
+      <p>A report you keep: courses that fit, colleges across safe, likely and stretch, with fees, requirements and dates set out.</p></div>
+    <div class="step"><div class="step-n">3</div><h3>Through to admission</h3>
+      <p>Forms, deadlines, counselling rounds, documents. We stay with you until your child has a seat, not until you have a PDF.</p></div>
   </div>
 </div></section>
 
-<section style="padding-top:0"><div class="wrap">
-  <div class="card" style="display:grid;gap:12px">
-    <p class="eyebrow">Are you a school?</p>
-    <h3 style="font-size:20px">CBSE now requires a career counsellor for every 500 students</h3>
-    <p style="font-size:15px;color:var(--muted);max-width:62ch">The affiliation bye-laws were amended in January 2026 for Classes 9 to 12. We run structured career sessions in Jaipur schools at no cost to the school.</p>
-    <a class="more" href="schools.html">What a school session looks like →</a>
+<section class="tight"><div class="wrap">
+  <div class="card school">
+    <div>
+      <p class="eyebrow">Are you a school?</p>
+      <h3 style="margin-top:10px">CBSE now requires a career counsellor for every 500 students</h3>
+      <p style="margin-top:10px">The affiliation bye-laws were amended in January 2026 for Classes 9 to 12. We run structured career sessions in Jaipur schools at no cost to the school.</p>
+    </div>
+    <a class="btn" href="schools.html">What a school session looks like →</a>
   </div>
 </div></section>
+
+<section class="tight"><div class="wrap">
+  <div class="sec-head"><p class="eyebrow">Questions parents ask</p><h2>Straight answers</h2></div>
+  <div class="faq">
+    <details><summary>Is this really free, or is there a fee later?</summary><p>Free throughout. No registration fee, no assessment fee, no report fee, no fee at admission.</p></details>
+    <details><summary>Will you push my child towards a particular college?</summary><p>You will get a shortlist with reasons attached, including options that pay us nothing. Ask which colleges we have an arrangement with and we will tell you.</p></details>
+    <details><summary>My child has not chosen a stream yet. Too early?</summary><p>Class 11 is the right time, not too early. Stream selection closes more doors than any other decision, and it is usually made on the least information.</p></details>
+    <details><summary>What happens to our details?</summary><p>They stay with our counselling team, held with signed parental consent. Nothing is shared with any institution unless you ask us to apply, and you can have everything deleted at any time.</p></details>
+  </div>
+</div></section>
+</main>
 
 <footer><div class="wrap">
-  <div><b>Campuscout</b>Career guidance and college admissions.<br>Jaipur, Rajasthan.</div>
-  <div><b>Pages</b>
-    <a href="india.html">Studying in India</a>
-    <a href="abroad.html">Studying abroad</a>
-    <a href="schools.html">For schools</a>
-    <a href="about.html">About us</a>
+  <div class="foot">
+    <div><a class="brand" href="index.html"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#E5A45E"/><path d="M16 6.5l6 16-6-3.4-6 3.4z" fill="#0D1F1E"/></svg><span>Campus<em>cout</em></span></a>
+      <p>Career guidance and college admissions for Class 11 and 12 students and their parents. Jaipur, Rajasthan.</p></div>
+    <div><b>Pages</b>
+      <a href="india.html">Studying in India</a>
+      <a href="abroad.html">Studying abroad</a>
+      <a href="schools.html">For schools</a>
+      <a href="about.html">About us</a>
+    </div>
+    <div><b>Talk to us</b>
+      <a class="num" href="https://wa.me/919811451617">+91 98114 51617</a>
+      <span>Free for students and parents. Always.</span>
+    </div>
   </div>
-  <div><b>Talk to us</b>
-    <a class="num" style="color:#EFF4F2;text-decoration:none" href="https://wa.me/919811451617">+91 98114 51617</a><br>
-    <span style="font-size:12.5px">Free for students and parents. Always.</span>
-  </div>
+  <p class="foot-base">© 2026 Campuscout · Colleges pay us. Students and parents never do.</p>
 </div></footer>
+<a class="mcta" href="#start"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 21l2.1-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Get free guidance</a>
 
 <script>
 (function(){
-  var WA = "919811451617"; // Manish — WhatsApp, digits only, country code first
+  var WA = "919811451617"; // WhatsApp number, digits only, country code first
   var form = document.getElementById("lead"), err = document.getElementById("err");
   function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
 
@@ -212,3 +266,5 @@
   });
 })();
 </script>
+</body>
+</html>
