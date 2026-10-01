@@ -1,6 +1,7 @@
 // Campuscout website assistant: POST /api/chat
 // Streams a plain-text reply from Claude, grounded in the site's own pages.
-// Needs ANTHROPIC_API_KEY set in the Netlify site's environment variables.
+// Credentials: ANTHROPIC_API_KEY (and ANTHROPIC_BASE_URL) are injected by Netlify's
+// AI Gateway at runtime, or can be set as site environment variables.
 import Anthropic from "@anthropic-ai/sdk";
 import knowledge from "./knowledge.mjs";
 
@@ -28,7 +29,17 @@ How to answer:
 ${knowledge}
 </website_content>`;
 
-const client = new Anthropic(); // reads ANTHROPIC_API_KEY from the environment
+// Read credentials per request: Netlify's AI Gateway injects them at runtime.
+function makeClient() {
+  if (!process.env.ANTHROPIC_API_KEY) {
+    const present = ["ANTHROPIC_BASE_URL", "NETLIFY_AI_GATEWAY_KEY", "NETLIFY_AI_GATEWAY_URL"]
+      .filter((k) => process.env[k]);
+    console.error(`ANTHROPIC_API_KEY not set. Gateway vars present: ${present.join(", ") || "none"}; ` +
+      `gateway URL: ${process.env.NETLIFY_AI_GATEWAY_URL || "-"}`);
+    return null;
+  }
+  return { client: new Anthropic(), viaGateway: Boolean(process.env.ANTHROPIC_BASE_URL) };
+}
 
 function badRequest(msg, status = 400) {
   return new Response(msg, { status, headers: { "Content-Type": "text/plain; charset=utf-8" } });
@@ -72,16 +83,24 @@ export default async (req) => {
     async start(controller) {
       const send = (t) => controller.enqueue(encoder.encode(t));
       try {
-        const response = client.beta.messages.stream({
+        const setup = makeClient();
+        if (!setup) {
+          send(`The assistant is unavailable right now. Please message us on WhatsApp: ${WHATSAPP}.`);
+          return;
+        }
+        const params = {
           model: MODEL,
           max_tokens: 2048, // replies are deliberately short; also bounds cost per request
           output_config: { effort: "low" },
-          betas: ["server-side-fallback-2026-07-01"],
-          fallbacks: "default",
           cache_control: { type: "ephemeral" }, // caches the large, unchanging system prompt
           system: RULES,
           messages,
-        });
+        };
+        // Server-side refusal fallback needs a beta header, which Netlify's AI Gateway
+        // does not pass through, so only request it when calling Anthropic directly.
+        const response = setup.viaGateway
+          ? setup.client.messages.stream(params)
+          : setup.client.beta.messages.stream({ ...params, betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" });
         response.on("text", (delta) => send(delta));
         const final = await response.finalMessage();
         if (final.stop_reason === "refusal") {
