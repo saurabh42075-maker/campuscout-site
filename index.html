@@ -36,10 +36,6 @@
 .form-card .sub{font-size:14.5px;color:var(--muted);margin-top:6px}
 .form-card .btn{margin-top:20px}
 .form-card .alt{padding-top:12px;border-top:1px dashed var(--line)}
-.track{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s,box-shadow .2s}
-.track:hover{border-color:var(--ochre);transform:translateY(-3px)}
-.track h3{font-size:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.track .more{margin-top:auto;padding-top:20px}
 .school{display:grid;gap:18px;align-items:center}
 @media(min-width:820px){.school{grid-template-columns:1fr auto;gap:40px}}
 .school h3{font-size:clamp(21px,2.8vw,26px)}
@@ -117,7 +113,7 @@
       <p class="fine" id="err" role="status"></p>
       <p class="fine">We speak to the parent, not just the student. Nothing goes to any college without your say-so.</p>
       <p class="fine alt">WhatsApp not opening? Message us on
-        <span class="num" id="wa-display">+91 98114 51617</span>
+        <span class="num" id="wa-display">+1 229 402 0371</span>
         <button type="button" class="copy" id="copybtn">Copy</button></p>
     </form>
   </div>
@@ -228,10 +224,11 @@
       <a href="india.html">Studying in India</a>
       <a href="abroad.html">Studying abroad</a>
       <a href="schools.html">For schools</a>
+      <a href="guides.html">Free guides</a>
       <a href="about.html">About us</a>
     </div>
     <div><b>Talk to us</b>
-      <a class="num" href="https://wa.me/919811451617">+91 98114 51617</a>
+      <a class="num" href="https://wa.me/12294020371">+1 229 402 0371</a>
       <span>School counselling and India admissions are always free.</span>
     </div>
   </div>
@@ -241,7 +238,7 @@
 
 <script>
 (function(){
-  var WA = "919811451617"; // WhatsApp number, digits only, country code first
+  var WA = "12294020371"; // WhatsApp number, digits only, country code first
   var form = document.getElementById("lead"), err = document.getElementById("err");
   function v(id){var e=document.getElementById(id);return e?e.value.trim():"";}
 

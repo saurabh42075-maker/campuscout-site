@@ -255,3 +255,16 @@ footer .num{color:#EFF4F2}
 .limits h3{margin-top:10px}
 .quote-note{margin-top:14px;font-size:14.5px;color:var(--muted);padding-left:4px}
 .price{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-weight:600;color:var(--ink);font-size:15px}
+.phead .checked{margin-top:18px;font-size:13px;color:var(--on-shade-muted);opacity:.85}
+.card.warn{border-left:4px solid var(--ochre)}
+.card.limits > .ticks{margin-top:12px}
+.card.limits > p + p,.card.limits > .ticks + p{margin-top:12px}
+.sources ul{margin:14px 0 0;padding-left:18px;display:grid;gap:8px;font-size:14.5px}
+.sources a{text-underline-offset:3px;overflow-wrap:anywhere}
+
+/* link cards (homepage tracks, guides hub) */
+.track{display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .2s,transform .2s,box-shadow .2s}
+.track:hover{border-color:var(--ochre);transform:translateY(-3px)}
+.track h3{font-size:22px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.track .more{margin-top:auto;padding-top:20px}
+.track .inner > p{font-size:15px;color:var(--muted);margin-top:10px}
