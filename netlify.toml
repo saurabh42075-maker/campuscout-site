@@ -2,6 +2,10 @@
 [build]
   publish = "."
 
+# Older Netlify sites default to an old Node.js; the Anthropic SDK needs a modern one.
+[build.environment]
+  NODE_VERSION = "22"
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
