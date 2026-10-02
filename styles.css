@@ -318,3 +318,4 @@ textarea{resize:vertical;min-height:100px;line-height:1.5}
 .opening{margin-top:18px;border-left:4px solid var(--ochre)}
 .opening h3{margin-top:10px}
 .opening > p a{font-weight:600;overflow-wrap:anywhere}
+.cta-box p a{color:var(--ochre-hi);font-weight:600}

@@ -6,6 +6,59 @@
 [build.environment]
   NODE_VERSION = "22"
 
+# Canonical page URLs end in .html (see CLAUDE.md). Stop Netlify rewriting links
+# to the extensionless form, and send the extensionless form to the .html page.
+[build.processing.html]
+  pretty_urls = false
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/india"
+  to = "/india.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/abroad"
+  to = "/abroad.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/schools"
+  to = "/schools.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/about.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/careers"
+  to = "/careers.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guides"
+  to = "/guides.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guide-germany"
+  to = "/guide-germany.html"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/guide-us-assistantships"
+  to = "/guide-us-assistantships.html"
+  status = 301
+  force = true
